@@ -1,0 +1,218 @@
+ {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* Main Profile Container */
+.profile-container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    background-color: #101010;
+
+    /* Moss green margin/border */
+    border: 5px solid #556b2f;
+    border-radius: 20px;
+
+    box-shadow: 0 0 25px rgba(85, 107, 47, 0.5);
+}
+
+/* Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #556b2f;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #6b8e23;
+    transition: 0.3s ease;
+}
+
+.profile-picture:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #6b8e23;
+}
+
+h1 {
+    color: #9acd32;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.program {
+    color: #cccccc;
+    font-size: 18px;
+}
+
+/* Cards */
+.card {
+    background-color: #181818;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid #556b2f;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(85, 107, 47, 0.35);
+}
+
+.card h2 {
+    color: #9acd32;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.card p {
+    color: #dddddd;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills span {
+    background-color: #556b2f;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.skills span:hover {
+    background-color: #6b8e23;
+    transform: scale(1.05);
+}
+
+/* Contact */
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #9acd32;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Message Button */
+.message-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+button {
+    background-color: #556b2f;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #6b8e23;
+    transform: scale(1.05);
+}
+
+#message {
+    margin-top: 15px;
+    color: #9acd32;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #556b2f;
+    color: #999999;
+}
+
+/* Mobile-Friendly Design */
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .profile-container {
+        padding: 20px;
+        border-width: 3px;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .program {
+        font-size: 15px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .card h2 {
+        font-size: 21px;
+    }
+
+    .card p {
+        font-size: 15px;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+
+    .skills span {
+        font-size: 13px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
