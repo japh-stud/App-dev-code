@@ -1,218 +1,833 @@
- {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {   
+    box-sizing: border-box;   
+    margin: 0;   
+    padding: 0;   
+}   
+   
+body {   
+    font-family: Arial, Helvetica, sans-serif;   
+    background-color: #000000;   
+    color: #ffffff;   
+    min-height: 100vh;   
+    padding: 30px;   
+}   
+   
+/* Main Profile Container */   
+.profile-container {   
+    width: 100%;   
+    max-width: 900px;   
+    margin: auto;   
+    padding: 30px;   
+    background-color: #101010;   
+   
+    /* Moss green margin/border */   
+    border: 5px solid #556b2f;   
+    border-radius: 20px;   
+   
+    box-shadow: 0 0 25px rgba(85, 107, 47, 0.5);   
+}   
+   
+/* Header */   
+.profile-header {   
+    display: flex;   
+    align-items: center;   
+    gap: 25px;   
+    padding-bottom: 25px;   
+    border-bottom: 2px solid #556b2f;   
+}   
+   
+.profile-picture {   
+    width: 150px;   
+    height: 150px;   
+    object-fit: cover;   
+    border-radius: 50%;   
+    border: 5px solid #6b8e23;   
+    transition: 0.3s ease;   
+}   
+   
+.profile-picture:hover {   
+    transform: scale(1.05);   
+    box-shadow: 0 0 20px #6b8e23;   
+}   
+   
+h1 {   
+    color: #9acd32;   
+    font-size: 36px;   
+    margin-bottom: 10px;   
+}   
+   
+.program {   
+    color: #cccccc;   
+    font-size: 18px;   
+}   
+   
+/* Cards */   
+.card {   
+    background-color: #181818;   
+    margin-top: 25px;   
+    padding: 25px;   
+    border-radius: 15px;   
+    border-left: 5px solid #556b2f;   
+    transition: 0.3s ease;   
+}   
+   
+.card:hover {   
+    transform: translateY(-5px);   
+    box-shadow: 0 8px 20px rgba(85, 107, 47, 0.35);   
+}   
+   
+.card h2 {   
+    color: #9acd32;   
+    margin-bottom: 15px;   
+    font-size: 24px;   
+}   
+   
+.card p {   
+    color: #dddddd;   
+    line-height: 1.7;   
+    font-size: 16px;   
+}   
+   
+/* Skills */   
+.skills {   
+    display: flex;   
+    flex-wrap: wrap;   
+    gap: 12px;   
+}   
+   
+.skills span {   
+    background-color: #556b2f;   
+    color: white;   
+    padding: 10px 15px;   
+    border-radius: 20px;   
+    font-size: 14px;   
+    transition: 0.3s ease;   
+}   
+   
+.skills span:hover {   
+    background-color: #6b8e23;   
+    transform: scale(1.05);   
+}   
+   
+/* Contact */   
+.contact-info p {   
+    margin-bottom: 10px;   
+}   
+   
+.contact-info a {   
+    color: #9acd32;   
+    text-decoration: none;   
+}   
+   
+.contact-info a:hover {   
+    color: #ffffff;   
+    text-decoration: underline;   
+}   
+   
+/* Message Button */   
+.message-section {   
+    text-align: center;   
+    margin-top: 30px;   
+}   
+   
+button {   
+    background-color: #556b2f;   
+    color: white;   
+    border: none;   
+    padding: 14px 25px;   
+    border-radius: 8px;   
+    font-size: 16px;   
+    cursor: pointer;   
+    transition: 0.3s ease;   
+}   
+   
+button:hover {   
+    background-color: #6b8e23;   
+    transform: scale(1.05);   
+}   
+   
+#message {   
+    margin-top: 15px;   
+    color: #9acd32;   
+    font-size: 18px;   
+    font-weight: bold;   
+}   
+ 
+ 
+/* ================================================= */ 
+/* DATE & TIME DISPLAY */ 
+/* ================================================= */ 
+ 
+#dateTime { 
+    margin-top: 15px; 
+    color: #9acd32; 
+    font-size: 18px; 
+    font-weight: bold; 
+    line-height: 1.6; 
+} 
+ 
+#dateTime p { 
+    margin: 5px 0; 
+} 
+ 
+ 
+/* Footer */   
+footer {   
+    text-align: center;   
+    margin-top: 30px;   
+    padding-top: 20px;   
+    border-top: 2px solid #556b2f;   
+    color: #999999;   
+}   
+   
+/* Mobile-Friendly Design */   
+@media (max-width: 600px) {   
+   
+    body {   
+        padding: 10px;   
+    }   
+   
+    .profile-container {   
+        padding: 20px;   
+        border-width: 3px;   
+    }   
+   
+    .profile-header {   
+        flex-direction: column;   
+        text-align: center;   
+    }   
+   
+    .profile-picture {   
+        width: 120px;   
+        height: 120px;   
+    }   
+   
+    h1 {   
+        font-size: 28px;   
+    }   
+   
+    .program {   
+        font-size: 15px;   
+    }   
+   
+    .card {   
+        padding: 18px;   
+    }   
+   
+    .card h2 {   
+        font-size: 21px;   
+    }   
+   
+    .card p {   
+        font-size: 15px;   
+    }   
+   
+    .skills {   
+        justify-content: center;   
+    }   
+   
+    .skills span {   
+        font-size: 13px;   
+    }   
+   
+    button {   
+        width: 100%;   
+    }   
+   
+       
+}  
+  
+  
+/* ================================================= */  
+/* ADDITIONAL CODE FOR INTERACTIVE FEATURES */  
+/* ================================================= */  
+  
+  
+/* Dark / Light Mode */  
+  
+body.light-mode {  
+    background-color: #f2f2f2;  
+    color: #222222;  
+}  
+  
+body.light-mode .profile-container {  
+    background-color: #ffffff;  
+}  
+  
+body.light-mode .card {  
+    background-color: #f5f5f5;  
+}  
+  
+body.light-mode .card p {  
+    color: #333333;  
+}  
+  
+body.light-mode .program {  
+    color: #333333;  
+}  
+  
+body.light-mode .profile-header p {  
+    color: #333333;  
+}  
+  
+body.light-mode .message {  
+    background-color: #f5f5f5;  
+}  
+  
+body.light-mode footer {  
+    color: #555555;  
+}  
+ 
+ 
+/* ================================================= */ 
+/* ADDITIONAL LIGHT MODE DESIGN */ 
+/* ================================================= */ 
+ 
+body.light-mode .profile-container { 
+    border-color: #556b2f; 
+    box-shadow: 0 0 25px rgba(85, 107, 47, 0.5); 
+} 
+ 
+body.light-mode .profile-header { 
+    border-bottom-color: #556b2f; 
+} 
+ 
+body.light-mode .profile-picture { 
+    border-color: #6b8e23; 
+} 
+ 
+body.light-mode .profile-picture:hover { 
+    box-shadow: 0 0 20px #6b8e23; 
+} 
+ 
+body.light-mode h1 { 
+    color: #556b2f; 
+} 
+ 
+body.light-mode .card { 
+    border-left-color: #556b2f; 
+} 
+ 
+body.light-mode .card h2 { 
+    color: #556b2f; 
+} 
+ 
+body.light-mode .skills span { 
+    background-color: #556b2f; 
+    color: white; 
+} 
+ 
+body.light-mode .skills span:hover { 
+    background-color: #6b8e23; 
+} 
+ 
+body.light-mode .contact-info a { 
+    color: #556b2f; 
+} 
+ 
+body.light-mode button { 
+    background-color: #556b2f; 
+    color: white; 
+} 
+ 
+body.light-mode button:hover { 
+    background-color: #6b8e23; 
+} 
+ 
+body.light-mode #message { 
+    color: #556b2f; 
+} 
+ 
+body.light-mode #dateTime { 
+    color: #556b2f; 
+} 
+ 
+body.light-mode footer { 
+    border-top-color: #556b2f; 
+    color: #555555; 
+} 
+ 
+ 
+/* ================================================= */  
+/* CHANGE COLOR */  
+/* MOSS GREEN <-> BABY BLUE */  
+/* ================================================= */  
+  
+  
+/* Profile Outer Border */  
+  
+body.baby-blue .profile-container {  
+    border-color: #89cff0;  
+  
+    box-shadow:  
+        0 0 25px rgba(137, 207, 240, 0.5);  
+}  
+  
+  
+/* Header Border */  
+  
+body.baby-blue .profile-header {  
+    border-bottom-color: #89cff0;  
+}  
+  
+  
+/* Profile Picture Border */  
+  
+body.baby-blue .profile-picture {  
+    border-color: #89cff0;  
+}  
+  
+body.baby-blue .profile-picture:hover {  
+    box-shadow: 0 0 20px #89cff0;  
+}  
+  
+  
+/* Name */  
+  
+body.baby-blue h1 {  
+    color: #89cff0;  
+}  
+  
+  
+/* Card Border */  
+  
+body.baby-blue .card {  
+    border-left-color: #89cff0;  
+}  
+  
+  
+/* Card Headings */  
+  
+body.baby-blue .card h2 {  
+    color: #89cff0;  
+}  
+  
+  
+/* Skills Boxes */  
+  
+body.baby-blue .skills span {  
+    background-color: #89cff0;  
+    color: #102030;  
+}  
+  
+body.baby-blue .skills span:hover {  
+    background-color: #b8e5f5;  
+}  
+  
+  
+/* Gmail */  
+  
+body.baby-blue .contact-info a {  
+    color: #89cff0;  
+}  
+  
+  
+/* Buttons */  
+  
+body.baby-blue button {  
+    background-color: #89cff0;  
+    color: #102030;  
+}  
+  
+body.baby-blue button:hover {  
+    background-color: #b8e5f5;  
+}  
+  
+  
+/* Message Text */  
+  
+body.baby-blue #message {  
+    color: #89cff0;  
+}  
+ 
+ 
+/* Date & Time Text */ 
+ 
+body.baby-blue #dateTime { 
+    color: #89cff0; 
+} 
+ 
+body.baby-blue #dateTime p { 
+    color: #89cff0; 
+} 
+  
+  
+/* Interactive Features Box */  
+  
+body.baby-blue .message {  
+    border-color: #89cff0;  
+}  
+ 
+ 
+/* Interactive Section Box */ 
+ 
+body.baby-blue .interactive-section { 
+    border-color: #89cff0; 
+} 
+  
+  
+/* Interactive Features Heading */  
+  
+body.baby-blue .message h1 {  
+    color: #89cff0;  
+}  
+ 
+ 
+/* Interactive Section Heading */ 
+ 
+body.baby-blue .interactive-section h2 { 
+    color: #89cff0; 
+} 
+  
+  
+/* Footer */  
+  
+body.baby-blue footer {  
+    border-top-color: #89cff0;  
+    color: #89cff0;  
+}  
+  
+  
+/* ================================================= */  
+/* INTERACTIVE BUTTONS */  
+/* ================================================= */  
+  
+.interactive-section {  
+    text-align: center; 
+    margin-top: 30px; 
+    padding: 25px; 
+    background-color: #181818; 
+    border: 2px solid #556b2f; 
+    border-radius: 15px; 
+    transition: 0.5s ease; 
+}  
+  
+.interactive-section h2 {  
+    text-align: center;  
+    margin-bottom: 20px; 
+    color: #9acd32; 
+}  
+  
+.interactive-buttons {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    gap: 15px;  
+    width: 100%;  
+    text-align: center;  
+}  
+  
+.buttons {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    gap: 15px;  
+    flex-wrap: wrap;  
+}  
+ 
+ 
+/* ================================================= */ 
+/* INTERACTIVE SECTION LIGHT MODE */ 
+/* ================================================= */ 
+ 
+body.light-mode .interactive-section { 
+    background-color: #f5f5f5; 
+    border-color: #556b2f; 
+} 
+ 
+body.light-mode .interactive-section h2 { 
+    color: #556b2f; 
+} 
+ 
+ 
+/* ================================================= */  
+/* MOBILE-FRIENDLY INTERACTIVE BUTTONS */  
+/* ================================================= */  
+  
+@media (max-width: 600px) {  
+  
+    .interactive-buttons {  
+        flex-direction: column;  
+        align-items: center;  
+        justify-content: center;  
+        width: 100%;  
+    }  
+  
+    .interactive-buttons button {  
+        width: 100%;  
+    }  
+  
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #000000;
-    color: #ffffff;
-    min-height: 100vh;
-    padding: 30px;
-}
 
-/* Main Profile Container */
-.profile-container {
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
-    padding: 30px;
-    background-color: #101010;
+/* ================================================= */
+/* ADDITIONAL BABY BLUE OVERRIDES */
+/* ================================================= */
 
-    /* Moss green margin/border */
-    border: 5px solid #556b2f;
-    border-radius: 20px;
+/* Interactive Features Box */
 
-    box-shadow: 0 0 25px rgba(85, 107, 47, 0.5);
-}
-
-/* Header */
-.profile-header {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    padding-bottom: 25px;
-    border-bottom: 2px solid #556b2f;
-}
-
-.profile-picture {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #6b8e23;
-    transition: 0.3s ease;
-}
-
-.profile-picture:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px #6b8e23;
-}
-
-h1 {
-    color: #9acd32;
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.program {
-    color: #cccccc;
-    font-size: 18px;
-}
-
-/* Cards */
-.card {
+body.baby-blue .interactive-section {
+    border-color: #89cff0;
     background-color: #181818;
-    margin-top: 25px;
-    padding: 25px;
-    border-radius: 15px;
-    border-left: 5px solid #556b2f;
-    transition: 0.3s ease;
+
+    box-shadow:
+        0 0 15px rgba(137, 207, 240, 0.4);
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(85, 107, 47, 0.35);
+
+/* Interactive Features Heading */
+
+body.baby-blue .interactive-section h2 {
+    color: #89cff0;
+
+    text-shadow:
+        0 0 5px #89cff0;
 }
 
-.card h2 {
-    color: #9acd32;
-    margin-bottom: 15px;
-    font-size: 24px;
+
+/* Message Section */
+
+body.baby-blue .message-section {
+    border-color: #89cff0;
 }
 
-.card p {
+
+/* Date & Time */
+
+body.baby-blue #dateTime {
+    color: #89cff0;
+}
+
+body.baby-blue #dateTime p {
+    color: #89cff0;
+}
+
+
+/* Program */
+
+body.baby-blue .program {
+    color: #89cff0;
+}
+
+
+/* Header Information */
+
+body.baby-blue .profile-header p {
     color: #dddddd;
-    line-height: 1.7;
-    font-size: 16px;
 }
 
-/* Skills */
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+
+/* Card Paragraphs */
+
+body.baby-blue .card p {
+    color: #dddddd;
 }
 
-.skills span {
-    background-color: #556b2f;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    transition: 0.3s ease;
+
+/* Contact Information */
+
+body.baby-blue .contact-info p {
+    color: #dddddd;
 }
 
-.skills span:hover {
-    background-color: #6b8e23;
-    transform: scale(1.05);
+
+/* Gmail */
+
+body.baby-blue .contact-info a {
+    color: #89cff0;
 }
 
-/* Contact */
-.contact-info p {
-    margin-bottom: 10px;
+
+/* Gmail Hover */
+
+body.baby-blue .contact-info a:hover {
+    color: #b8e5f5;
 }
 
-.contact-info a {
-    color: #9acd32;
-    text-decoration: none;
+
+/* Message */
+
+body.baby-blue #message {
+    color: #89cff0;
 }
 
-.contact-info a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-}
-
-/* Message Button */
-.message-section {
-    text-align: center;
-    margin-top: 30px;
-}
-
-button {
-    background-color: #556b2f;
-    color: white;
-    border: none;
-    padding: 14px 25px;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-button:hover {
-    background-color: #6b8e23;
-    transform: scale(1.05);
-}
-
-#message {
-    margin-top: 15px;
-    color: #9acd32;
-    font-size: 18px;
-    font-weight: bold;
-}
 
 /* Footer */
-footer {
-    text-align: center;
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 2px solid #556b2f;
-    color: #999999;
+
+body.baby-blue footer {
+    border-top-color: #89cff0;
+    color: #89cff0;
 }
 
-/* Mobile-Friendly Design */
-@media (max-width: 600px) {
 
-    body {
-        padding: 10px;
-    }
+/* Footer Text */
 
-    .profile-container {
-        padding: 20px;
-        border-width: 3px;
-    }
+body.baby-blue footer p {
+    color: #89cff0;
+}
+/* ================================================= */
+/* LIGHT MODE + BABY BLUE */
+/* ================================================= */
 
-    .profile-header {
-        flex-direction: column;
-        text-align: center;
-    }
+/* Main Profile */
 
-    .profile-picture {
-        width: 120px;
-        height: 120px;
-    }
+body.light-mode.baby-blue .profile-container {
+    background-color: #ffffff;
+    border-color: #89cff0;
 
-    h1 {
-        font-size: 28px;
-    }
+    box-shadow:
+        0 0 25px rgba(137, 207, 240, 0.5);
+}
 
-    .program {
-        font-size: 15px;
-    }
 
-    .card {
-        padding: 18px;
-    }
+/* Header */
 
-    .card h2 {
-        font-size: 21px;
-    }
+body.light-mode.baby-blue .profile-header {
+    border-bottom-color: #89cff0;
+}
+/* Profile Picture */
 
-    .card p {
-        font-size: 15px;
-    }
+body.light-mode.baby-blue .profile-picture {
+    border-color: #89cff0;
+}
 
-    .skills {
-        justify-content: center;
-    }
+body.light-mode.baby-blue .profile-picture:hover {
+    box-shadow: 0 0 20px #89cff0;
+}
 
-    .skills span {
-        font-size: 13px;
-    }
+/* Name */
+body.light-mode.baby-blue h1 {
+    color: #89cff0;
+}
 
-    button {
-        width: 100%;
-    }
+
+/* Program */
+
+body.light-mode.baby-blue .program {
+    color: #333333;
+}
+
+
+/* Cards */
+
+body.light-mode.baby-blue .card {
+    background-color: #f5f5f5;
+    border-left-color: #89cff0;
+}
+
+
+/* Card Headings */
+
+body.light-mode.baby-blue .card h2 {
+    color: #89cff0;
+}
+
+
+/* Card Paragraph */
+
+body.light-mode.baby-blue .card p {
+    color: #333333;
+}
+
+
+/* Skills */
+
+body.light-mode.baby-blue .skills span {
+    background-color: #89cff0;
+    color: #102030;
+}
+
+
+/* Skills Hover */
+
+body.light-mode.baby-blue .skills span:hover {
+    background-color: #b8e5f5;
+}
+
+
+/* Gmail */
+
+body.light-mode.baby-blue .contact-info a {
+    color: #89cff0;
+}
+
+
+/* Buttons */
+
+body.light-mode.baby-blue button {
+    background-color: #89cff0;
+    color: #102030;
+}
+
+
+/* Button Hover */
+
+body.light-mode.baby-blue button:hover {
+    background-color: #b8e5f5;
+}
+
+
+/* Message */
+
+body.light-mode.baby-blue #message {
+    color: #89cff0;
+}
+
+
+/* Date & Time */
+
+body.light-mode.baby-blue #dateTime {
+    color: #89cff0;
+}
+
+body.light-mode.baby-blue #dateTime p {
+    color: #89cff0;
+}
+
+
+/* Interactive Features */
+
+body.light-mode.baby-blue .interactive-section {
+    background-color: #f5f5f5;
+    border-color: #89cff0;
+
+    box-shadow:
+        0 0 15px rgba(137, 207, 240, 0.4);
+}
+
+
+/* Interactive Heading */
+
+body.light-mode.baby-blue .interactive-section h2 {
+    color: #89cff0;
+}
+
+
+/* Footer */
+
+body.light-mode.baby-blue footer {
+    border-top-color: #89cff0;
+    color: #89cff0;
+}
+
+
+/* ================================================= */
+/* SMOOTH COLOR TRANSITION */
+/* ================================================= */
+
+.profile-container,
+.profile-header,
+.profile-picture,
+.card,
+.card h2,
+h1,
+.skills span,
+.contact-info a,
+button,
+#message,
+#dateTime,
+.interactive-section,
+.interactive-section h2,
+footer {
+    transition: 0.5s ease;
 }
